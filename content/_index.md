@@ -1,6 +1,8 @@
-+++
-title = "Artwork Agile"
-+++
+---
+title: "Artwork Agile"
+extra:
+    add_toc: true
+---
 
 # Zola Index: Artwork Agile
 
