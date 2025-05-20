@@ -3,8 +3,7 @@ name: Build and deploy GH Pages
 jobs:
   build:
     permissions:
-      contents: read
-      deployments: write
+      contents: write
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
