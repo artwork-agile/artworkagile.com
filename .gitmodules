@@ -1,0 +1,3 @@
+[submodule "themes/default"]
+	path = themes/default
+	url = https://gitlab.com/4bcx/no-style-please.git
