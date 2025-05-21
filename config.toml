@@ -1,13 +1,20 @@
 # The URL the site will be built for
-base_url = "https://artworkagile.com"
+base_url = "https://artwork-agile.github.io/artworkagile.com/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
+generate_feeds = true
+
+taxonomies = [
+    { name = "tags" },
+    { name = "categories" },
+    { name = "contexts" },
+]
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
-theme = "default"
+theme = "no-style-please"
 
 [markdown]
 
