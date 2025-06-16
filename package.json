@@ -1,0 +1,29 @@
+{
+	"name": "artworkagile.com",
+	"version": "1.0.0",
+	"description": "Website for artworkagile.com",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build:css": "tailwindcss -i ./themes/default/sass/style.scss -o ./public/style.css --minify",
+		"dev:css": "tailwindcss -i ./themes/default/sass/style.scss -o ./public/style.css --watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/artwork-agile/artworkagile.com.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs",
+	"bugs": {
+		"url": "https://github.com/artwork-agile/artworkagile.com/issues"
+	},
+	"homepage": "https://github.com/artwork-agile/artworkagile.com#readme",
+	"devDependencies": {
+		"tailwindcss": "^4.1.10"
+	},
+	"dependencies": {
+		"@tailwindcss/cli": "^4.1.10"
+	}
+}
