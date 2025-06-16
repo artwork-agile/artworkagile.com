@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  zola:
+    image: ghcr.io/getzola/zola:v0.19.1
+    command: serve --interface 0.0.0.0 --port 1111
+    volumes:
+      - .:/site
+    ports:
+      - '1111:1111'
+    working_dir: /site
