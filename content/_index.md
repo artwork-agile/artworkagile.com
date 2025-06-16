@@ -4,9 +4,9 @@ extra:
     add_toc: true
 ---
 
-# Zola Index: Artwork Agile
+# Artwork Agile
 
-## About Me
+## About Us
 Welcome to my space! I am a passionate artist and productivity enthusiast, dedicated to blending creativity with efficiency. My work explores the intersection of art and agile methodologies, striving to foster inspiration while maximizing productivity.
 
 ## My Art
@@ -15,14 +15,6 @@ Welcome to my space! I am a passionate artist and productivity enthusiast, dedic
 - **Exhibitions**: [List notable exhibitions, if any]
 
 ## Productivity Focus
-- **Methods**: Agile frameworks, time management techniques
-- **Workshops**: [Information on any productivity workshops you lead]
 - **Tools**: Recommendations for productivity tools and apps
-
-## Blog
-Explore my insights on art and productivity, featuring tips, techniques, and reflections on balancing creativity with effective workflow.
-
-## Contact
-[Your contact information or social media links]
 
 Join me on this journey where art meets agility and creativity fuels productivity!
