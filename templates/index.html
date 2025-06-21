@@ -10,36 +10,27 @@
 		playsinline
 	></video>
 	<div class="welcome__textbox">
-		<h1 class="welcome__headerfont">Finding your purpose through art.</h1>
+		<h1 class="welcome__headerfont">Finding Your Purpose Through Art.</h1>
 		<h2 class="welcome__sub-headerfont">
 			Create your journey at Artwork Agile
 		</h2>
 	</div>
 </div>
-<ul>
-	{{ section.content | safe }} {% if config.extra.list_pages %} {% if
-	paginator %} {% set pages = paginator.pages | sort(attribute="date") |
-	reverse %} {% else %} {% set pages = section.pages | sort(attribute="date")
-	| reverse %} {% endif %} {{ section.content | safe }} {% for page in pages
-	%}
-	<li>
-		<a href="{{ page.permalink | safe }}"
-			>{% if page.date and not config.extra.no_list_date %}{{ page.date }}
-			- {% endif %}{{ page.title }}</a
-		>
-		<br />
-		{{ page.description }}
-	</li>
-	{% endfor %}
-</ul>
-{% if paginator %}
-<p>
-	{% if paginator.previous %}<a href="{{ paginator.first }}"
-		>&lt;&lt; First</a
-	>
-	<a href="{{ paginator.previous }}">&lt; Previous</a>{% endif %} [{{
-	paginator.current_index }}/{{ paginator.number_pagers }}] {% if
-	paginator.next %}<a href="{{ paginator.next }}">Next &gt;</a>
-	<a href="{{ paginator.last }}">Last &gt;&gt;</a>{% endif %}
-</p>
-{% endif %} {% endif %} {% endblock content %}
+<div class="content">
+	<img src="images/content-bg.png" />
+	<div class="content__contentbox__container">
+		<div class="content__contentbox">
+			<img src="images/art-agile-text-transparent_gold_ochre.png" />
+			<p class="content__contentbox__text">
+				We are a community of passionate artists and productivity
+				enthusiasts, dedicated to blending creativity with efficiency.
+				<br /><br />
+				Our work explores the intersection of art and agile
+				methodologies, striving to foster inspiration while maximizing
+				productivity.
+			</p>
+		</div>
+
+		{% endblock content %}
+	</div>
+</div>
