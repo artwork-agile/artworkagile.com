@@ -1,37 +1,69 @@
-// @import "tailwindcss";
-
-
 $titan-buff-dark: #D9CBAD;
 $mars-black: #161617;
+$green-earth: #2E342B;
+
 body {
   margin: 0
 }
+
+@mixin footer-header {
+  display: flex;
+  width: auto;
+  height: 3rem;
+  padding: 0.8rem 1rem;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+
+@mixin montserrat-big {
+  font-family: Montserrat;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+@mixin montserrat-medium {
+  font-family: Montserrat;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin montserrat-small {
+  font-family: Montserrat;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+}
+
+@mixin playfair-big {
+  font-family: 'Playfair', serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+// HEADER
 
 .header {
   position: sticky;
   top: 0;
   z-index: 100;
-  display: flex;
-  width: auto;
-  height: 3rem;
-  padding: 0.8rem 1rem;
-  justify-content: center;
-  align-items: center;
   background: $titan-buff-dark;
-}
-
-
-.header__items {
-  display: flex;
-  justify-content: space-between;  
-  align-items: center;             
-  width: 100%;                     
+  @include footer-header;
 }
 
 .header img {
   max-width: 50px;
   height: auto;
 }
+
+// WELCOME SECTION
 
 .welcome {
   position: relative;
@@ -40,17 +72,13 @@ body {
   height: 30rem;
 }
 
-.video__container {
+.welcome video {
   width: 100%;
   align-items: center;
+  height: 100%;
+  object-fit: cover;
   background: $mars-black;
   flex-shrink: 0;
-}
-
-.video__container video {
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
 }
 
 .welcome__textbox {
@@ -69,13 +97,9 @@ body {
 .welcome__headerfont {
   margin: 0;
   color: #FCF4E3;
-  text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: 'Playfair', serif;
-  font-size: 3rem;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
+  text-align: center;
+  @include playfair-big;
 }
 
 .welcome__sub-headerfont {
@@ -89,3 +113,40 @@ body {
   font-weight: 400;
   line-height: normal;
 }
+
+// FOOTER
+
+.footer {
+  background: $mars-black;
+  @include footer-header;
+}
+
+
+.footer__contact-me {
+  color: #FFF;
+  @include montserrat-medium;
+}
+
+.footer__some-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+
+// UNDERFOOTER
+
+
+.underfooter {
+  background-color: $green-earth;
+  @include footer-header;
+  height: 1rem;
+}
+
+.underfooter__text {
+  color: #FFF;
+  @include montserrat-small;
+}
+
+
