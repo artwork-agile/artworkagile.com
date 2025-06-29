@@ -101,64 +101,70 @@
 				class="header__img"
 				src="images/art-agile-logo-transparent-green-earth.png"
 			/>
-			<nav class="navbar navbar-expand-lg bg-body-tertiary">
-				<div class="container-fluid">
-					<img
-						src="images/menu-icon.png"
-						class="header__img navbar-toggler"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarSupportedContent"
-						aria-controls="navbarSupportedContent"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					/>
+			<nav class="navbar navbar-expand-lg">
+				<div class="container-fluid p-0">
+					<div class="dropdown navbar-toggler p-0">
+						<img
+							src="images/menu-icon.png"
+							class="header__img dropdown-toggle"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+							alt="Menu"
+							style="cursor: pointer; width: 40px"
+						/>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li>
+								<a
+									class="dropdown-item p-3 navbar-font"
+									href="#"
+									>Video Silencer</a
+								>
+							</li>
+							<li>
+								<a
+									class="dropdown-item p-3 navbar-font"
+									href="#"
+									>Drawing Templates</a
+								>
+							</li>
+							<li>
+								<a
+									class="dropdown-item p-3 navbar-font"
+									href="#"
+									>About Us</a
+								>
+							</li>
+						</ul>
+					</div>
 					<div
 						class="collapse navbar-collapse"
 						id="navbarSupportedContent"
 					>
-						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
 							<li class="nav-item">
 								<a
-									class="nav-link active"
+									class="nav-link active navbar-font"
 									aria-current="page"
 									href="#"
-									>Home</a
+									>Video Silencer</a
 								>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Link</a>
+								<a class="nav-link active navbar-font" href="#"
+									>Drawing Templates</a
+								>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" aria-disabled="true"
-									>Disabled</a
+								<a
+									class="nav-link active navbar-font"
+									aria-disabled="true"
+									>About Us</a
 								>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</nav>
-			<div class="dropdown">
-				<img
-					src="images/menu-icon.png"
-					class="header__img dropdown-toggle"
-					data-bs-toggle="dropdown"
-					aria-expanded="false"
-					alt="Menu"
-					style="cursor: pointer; width: 40px"
-				/>
-				<ul class="dropdown-menu">
-					<li>
-						<a class="dropdown-item" href="#">Video Silencer</a>
-					</li>
-					<li>
-						<a class="dropdown-item" href="#">Drawing Templates</a>
-					</li>
-					<li>
-						<a class="dropdown-item" href="#">About Us</a>
-					</li>
-				</ul>
-			</div>
 		</header>
 		<div class="w">
 			<main class="page-content" aria-label="Content">

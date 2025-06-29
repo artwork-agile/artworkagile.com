@@ -5,9 +5,11 @@ $titan-buff-light: #FCF4E3;
 $mars-black: #161617;
 $green-earth: #2E342B;
 $white: #FFF;
+$transparent: rgba(0, 0, 0, 0);
 
 // BOOTSTRAP IMPORT AND CHANGES
 
+$navbar-light-toggler-border-color: $transparent;
 $dropdown-bg: $mars-black;
 $dropdown-color: $titan-buff-light;
 $dropdown-link-color: $titan-buff-light;
@@ -232,7 +234,10 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 }
 
-
+.navbar-font {
+  @include montserrat-small;
+  font-weight: 600;
+}
 
 
 
