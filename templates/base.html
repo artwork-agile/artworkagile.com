@@ -90,10 +90,8 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
 		/>
-
 		<style>
-			@import url("https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap");
-			@import url("https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+			@import url("https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
 		</style>
 		{% endblock css %}
 	</head>
@@ -103,8 +101,64 @@
 				class="header__img"
 				src="images/art-agile-logo-transparent-green-earth.png"
 			/>
-			<img class="header__img" src="images/menu-icon.png" />
-			<!-- TODO implement <nav> popup and desktop version !-->
+			<nav class="navbar navbar-expand-lg bg-body-tertiary">
+				<div class="container-fluid">
+					<img
+						src="images/menu-icon.png"
+						class="header__img navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					/>
+					<div
+						class="collapse navbar-collapse"
+						id="navbarSupportedContent"
+					>
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a
+									class="nav-link active"
+									aria-current="page"
+									href="#"
+									>Home</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Link</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" aria-disabled="true"
+									>Disabled</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="dropdown">
+				<img
+					src="images/menu-icon.png"
+					class="header__img dropdown-toggle"
+					data-bs-toggle="dropdown"
+					aria-expanded="false"
+					alt="Menu"
+					style="cursor: pointer; width: 40px"
+				/>
+				<ul class="dropdown-menu">
+					<li>
+						<a class="dropdown-item" href="#">Video Silencer</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#">Drawing Templates</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#">About Us</a>
+					</li>
+				</ul>
+			</div>
 		</header>
 		<div class="w">
 			<main class="page-content" aria-label="Content">
@@ -129,5 +183,10 @@
 				<p class="underfooter__text">© 2025 Artwork Agile</p>
 			</div>
 		</footer>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>

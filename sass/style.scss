@@ -1,20 +1,48 @@
+// COLOR VARS
+
 $titan-buff-dark: #D9CBAD;
+$titan-buff-light: #FCF4E3;
 $mars-black: #161617;
 $green-earth: #2E342B;
 $white: #FFF;
-body {
+
+// BOOTSTRAP IMPORT AND CHANGES
+
+$dropdown-bg: $mars-black;
+$dropdown-color: $titan-buff-light;
+$dropdown-link-color: $titan-buff-light;
+$dropdown-link-hover-bg: $green-earth;
+$dropdown-link-active-bg: $titan-buff-light;
+$dropdown-link-active-color: $mars-black;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// TEXT SHADOW
+
+$text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+body, h1, h2, h3, h4, h5, h6, p {
   margin: 0
 }
 
-@mixin footer-header {
-  display: flex;
-  width: auto;
-  height: 3rem;
-  padding: 0.8rem 1rem;
-  justify-content: space-between; 
-  align-items: center;
+// ABSOLUTE CENTRALIZED POSITIONING 
+
+@mixin absolute-positioning-center {
+  gap: 0.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+// FONT MIXINS
+
+@mixin footer-header {
+  @extend .d-flex;
+  @extend .justify-content-between;
+  @extend .align-items-center;
+  @extend .px-3;
+  @extend .py-2;
+  height: 4rem;
+}
 
 @mixin montserrat-big {
   font-family: Montserrat;
@@ -26,7 +54,7 @@ body {
 
 @mixin montserrat-medium {
   font-family: Montserrat;
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -34,7 +62,7 @@ body {
 
 @mixin montserrat-small {
   font-family: Montserrat;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 200;
   line-height: normal;
@@ -42,76 +70,117 @@ body {
 
 @mixin playfair-big {
   font-family: 'Playfair', serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 800;
+  line-height: normal;
+}
+
+@mixin luxurious-script-medium {
+  font-family: "Luxurious Script";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
   line-height: normal;
 }
 
 // HEADER
 
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  @extend .sticky-top;
   background: $titan-buff-dark;
   @include footer-header;
 }
 
-.header img {
+.header__img {
   max-width: 50px;
-  height: auto;
 }
 
 // WELCOME SECTION
 
 .welcome {
-  position: relative;
-  display: flex;
-  width: auto;
+  @extend .position-relative;
+  @extend .d-flex;
   height: 30rem;
 }
 
+
 .welcome video {
-  width: 100%;
-  align-items: center;
-  height: 100%;
-  object-fit: cover;
-  background: $mars-black;
-  flex-shrink: 0;
+  @extend .w-100;
+  @extend .align-items-center;
+  @extend .object-fit-cover;
+  background-color: $mars-black; 
 }
 
+
 .welcome__textbox {
-  position: absolute;
-  display: flex;
-  width: auto;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  @extend .position-absolute;
+  @extend .flex-column;
+  @extend .align-items-center;
+  @extend .justify-content-center;
+  @include absolute-positioning-center;
 }
 
 .welcome__headerfont {
-  margin: 0;
-  color: #FCF4E3;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  text-align: center;
+  @extend .m-0;
+  color: $titan-buff-light;
+  text-shadow: $text-shadow;
+  @extend .text-center;
   @include playfair-big;
 }
 
 .welcome__sub-headerfont {
-  margin: 0;
-  color: #FCF4E3;
-  text-align: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Luxurious Script";
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  @extend .m-0;
+  color: $titan-buff-light;
+  @extend .text-center;
+  text-shadow: $text-shadow;
+  @include luxurious-script-medium;
+}
+
+// CONTENT
+
+.content {
+  @extend .row;
+  @extend .g-0;
+  min-height: 30rem;
+  background-color: $mars-black;
+}
+
+.content__contentbox__container {
+  @extend .col;
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+}
+
+.content__contentbox {
+  max-width: 20rem;
+  @extend .m-5;
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .justify-content-center;
+  @extend .align-items-end;
+  @extend .gap-3;
+}
+
+.content__contentbox__img {
+  @extend .w-100;
+}
+
+.content__contentbox__text {
+  color: $white;
+  @include montserrat-medium;
+  @extend .text-end;
+}
+
+.content__img__container {
+  @extend .col;
+}
+
+.content__img {
+  @extend .object-fit-cover;
+  @extend .w-100;
+  @extend .h-100;
 }
 
 // FOOTER
@@ -121,69 +190,50 @@ body {
   @include footer-header;
 }
 
-
 .footer__contact-me {
   color: $white;
+  @extend .justify-content-center;
+  @extend .align-items-center;
   @include montserrat-medium;
 }
 
 .footer__some-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  @extend .gap-5;
 }
-
 
 // UNDERFOOTER
 
-
 .underfooter {
   background-color: $green-earth;
+  @extend .d-flex;
   @include footer-header;
-  justify-content: center;
-  height: 1rem;
+  justify-content: center !important;
+  height: 3rem;
 }
 
-.content {
-  display: grid;
-  background-color: $mars-black;
-  grid-template-rows: repeat(1, minmax(0, 1fr));
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
 .underfooter__text {
   color: $white;
   @include montserrat-small;
 }
 
-.content__contentbox__container {
-  display: flex;
-  padding: 5rem 2rem 5rem 2rem;
-  justify-content: center;
-  align-items: center;
-  // grid-row: 1 / span 1;
+// RESPONSIVENESS 
+
+@include media-breakpoint-down(md) {
+  .content__contentbox {
+    max-width: 10rem;
+  }
+
+  .content__contentbox__text {
+    @include montserrat-small;
+  }
+
 }
 
-.content__contentbox {
-  display: flex;
-  flex-direction: column;
-  max-width: 20em;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
 
-.content__contentbox__text {
-  color: $white;
-  @include montserrat-small;
-  text-align: right;
-}
 
-.content img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 
 
